@@ -23,13 +23,13 @@
 .project {
     position: relative;
     width: 300px;
-    height: 200px;
+    height: 300px;
     padding: 20px;
     overflow: hidden;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(10px);
-    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
@@ -38,18 +38,18 @@
     z-index: 5;
     color: #ffffff;
     padding: 10px;
-    transition: opacity 0.3s ease; /* Smooth fade-out effect */
+    transition: opacity 0.3s ease;
 }
 
 .project:hover {
     z-index: 10;
-    transform: scale(1.75); /* Slightly enlarges the project on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a stronger shadow on hover */
+    transform: scale(1.5, 1.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project:hover .project-title,
 .project:hover .project-description {
-    opacity: 0; /* Hide the text by making it fully transparent */
+    opacity: 0;
 }
 
 .project-content {
@@ -66,30 +66,30 @@
     right: 0;
     bottom: 0;
     overflow: hidden;
-    opacity: 0; /* Hides the image initially */
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .project:hover .project-image {
-    opacity: 1; /* Makes the image visible on hover */
+    opacity: 1;
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the space nicely */
+    object-fit: cover;
     transition: transform 0.3s cubic-bezier();
-    display: block; /* Show the video when the project is hovered */
+    display: block;
 }
 
 .project:hover .project-image img {
-    transform: scale(1.2); /* Zooms the image slightly when the project is hovered */
+    transform: scale(1.2);
 }
 
 #projects .project video {
-    max-width: 100%; /* Ensures the video is responsive */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 8px; /* Adds rounded corners (optional) */
+    max-width: 100%;
+    height: 100%;
+    border-radius: 8px;
     position: absolute;
     top: 0;
     left: 0;
@@ -99,14 +99,14 @@
 }
 
 #projects .project video {
-    display: none; /* Hide the video by default */
+    display: none;
     max-width: 100%;
-    object-fit: cover; /* Ensures the image covers the space nicely */
+    object-fit:cover;
     height: fit-content;
 }
 
 #projects .project:hover video {
-    display: block; /* Show the video when the project is hovered */
+    display: block;
 }
 
 /* Fade-in animation */
@@ -120,11 +120,11 @@
 }
 
 #projects .project video.fade-in {
-    animation: fadeIn 0.3s ease; /* 2s duration, ease-in-out for smooth transition */
-    opacity: 0; /* Initial opacity set to 0 */
+    animation: fadeIn 0.3s ease;
+    opacity: 1;
     max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Optional rounded corners */
+    border-radius: 8px;
 }
 
 ul li a {
