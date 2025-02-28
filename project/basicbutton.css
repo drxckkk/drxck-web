@@ -1,0 +1,133 @@
+.project-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.project-title, .project-description {
+    z-index: 5;
+    color: #333;
+    padding: 10px;
+    transition: opacity 0.3s ease; /* Smooth fade-out effect */
+}
+
+.project:hover {
+    z-index: 10;
+    transform: scale(1.5); /* Slightly enlarges the project on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a stronger shadow on hover */
+}
+
+.project:hover .project-title,
+.project:hover .project-description {
+    opacity: 0; /* Hide the text by making it fully transparent */
+}
+
+.project-content {
+    padding: 20px;
+    color: #000000;
+    z-index: 2;
+    position: relative;
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    opacity: 0; /* Hides the image initially */
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .project-image {
+    opacity: 1; /* Makes the image visible on hover */
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the space nicely */
+    transition: transform 0.3s ease;
+    display: block; /* Show the video when the project is hovered */
+}
+
+.project:hover .project-image img {
+    transform: scale(1.2); /* Zooms the image slightly when the project is hovered */
+}
+
+#projects .project video {
+    max-width: 100%; /* Ensures the video is responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Adds rounded corners (optional) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#projects .project video {
+    display: none; /* Hide the video by default */
+    max-width: 100%;
+    object-fit: cover; /* Ensures the image covers the space nicely */
+    height: fit-content;
+}
+
+#projects .project:hover video {
+    display: block; /* Show the video when the project is hovered */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#projects .project video.fade-in {
+    animation: fadeIn 0.3s ease; /* 2s duration, ease-in-out for smooth transition */
+    opacity: 0; /* Initial opacity set to 0 */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+
+
+ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+ul li a i {
+    font-size: 1.5rem;
+    color: #6c63ff;
+}
+
+ul li a:hover i {
+    color: #ff6347;
+}

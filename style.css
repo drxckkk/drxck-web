@@ -1,0 +1,138 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    position: relative; /* Ensures the background circle appears behind the content */
+    overflow: hidden; /* Prevents any scrolling caused by the large circle */
+    overflow-y: auto;  /* Enables vertical scrolling when needed */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Ensures content is above the blurred circle */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+.section {
+    padding: 60px 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.section p {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+#projects {
+    height: 500px; /* Set a specific height */
+    overflow-y: auto; /* Enable vertical scrolling when the content overflows */
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.project p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centers list items horizontally */
+    justify-content: center; /* Centers list items vertically (if necessary) */
+    text-align: center; /* Ensures the text inside <li> is centered */
+    gap: 10px;
+}
+
+#contact ul li {
+    margin: 10px 0; /* Adds space between the list items */
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .projects {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
