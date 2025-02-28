@@ -43,7 +43,7 @@
 
 .project:hover {
     z-index: 10;
-    transform: scale(1.5); /* Slightly enlarges the project on hover */
+    transform: scale(1.75); /* Slightly enlarges the project on hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a stronger shadow on hover */
 }
 
@@ -78,7 +78,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures the image covers the space nicely */
-    transition: transform 0.3s ease;
+    transition: transform 0.3s cubic-bezier();
     display: block; /* Show the video when the project is hovered */
 }
 

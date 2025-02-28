@@ -1,30 +1,63 @@
 header {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 25px;
+    left: 25%;
+    width: 50%;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     backdrop-filter: blur(10px); /* Blur the background */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
     z-index: 1000; /* Ensure the header stays on top */
-    color: #000000;
-    font-family: 'Arial', sans-serif;
+    color: #ffffff;
     display: flex;
+    font-family: 'Arial', sans-serif;
     justify-content: space-between;
     align-items: center;
+    border-radius: 20px;
+}
+h1 {
+    font-family: 'Dancing Script', cursive;
 }
 
 footer {
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     backdrop-filter: blur(10px); /* Apply the same blur effect */
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-    color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    color: #ffffff;
     text-align: center;
     font-family: 'Arial', sans-serif;
+    z-index: 1000; /* Ensure the header stays on top */
+}
+
+/* Apply the fade-in animation with a delay */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 0.5s ease-out forwards;
+}
+
+/* Staggered animation for different elements */
+.fade-in:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.fade-in:nth-child(1) {
+    animation-delay: 0.3s; /* Delay the second element by 0.3 seconds */
+}
+
+.fade-in:nth-child(1.5) {
+    animation-delay: 0.6s; /* Delay the third element by 0.6 seconds */
+}
+
+/* The keyframes remain the same */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

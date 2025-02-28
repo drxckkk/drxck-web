@@ -1,4 +1,12 @@
-/* Resetting some default styles */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0; /* Start hidden */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -62,6 +70,7 @@ header nav ul li a:hover {
 #contact ul li {
     margin: 10px 0; /* Adds space between the list items */
 }
+
 body {
     background-image: url('assets/background.png');
     background-size: cover; /* Ensures the image covers the entire page */
