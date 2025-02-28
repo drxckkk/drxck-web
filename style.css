@@ -70,6 +70,11 @@ header nav ul li a:hover {
 #contact ul li {
     margin: 10px 0;
 }
+#contact p {
+    margin: 20px 0;
+    font-size: small;
+    font-weight: normal;
+}
 .projects-container {
     flex-direction: column;
     overflow: hidden; /* Prevent scrolling */
@@ -95,7 +100,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 480px) {
     header h1 {
         font-size: 2em;
     }
