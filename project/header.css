@@ -1,6 +1,6 @@
 header {
     position: fixed;
-    top: 25px;
+    top: 50px;
     left: 25%;
     width: 50%;
     padding: 20px;
@@ -14,9 +14,42 @@ header {
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
+    transition: all 0.3s ease;
 }
-h1 {
+
+header.scrolled {
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+}
+
+header h1 {
     font-family: 'Dancing Script', cursive;
+    transition: color 0.3s ease;
+}
+
+header h1:hover {
+    color: #696969; /* Change color on hover */
+}
+
+/* Style for the navigation links */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between navigation items */
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #696969; /* Change color on hover */
+    transform: scale(1.1); /* Slightly scale up the link */
 }
 
 footer {
@@ -31,33 +64,4 @@ footer {
     text-align: center;
     font-family: 'Arial', sans-serif;
     z-index: 1000; /* Ensure the header stays on top */
-}
-
-/* Apply the fade-in animation with a delay */
-.fade-in {
-    opacity: 0;
-    animation: fadeInAnimation 0.5s ease-out forwards;
-}
-
-/* Staggered animation for different elements */
-.fade-in:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.fade-in:nth-child(1) {
-    animation-delay: 0.3s; /* Delay the second element by 0.3 seconds */
-}
-
-.fade-in:nth-child(1.5) {
-    animation-delay: 0.6s; /* Delay the third element by 0.6 seconds */
-}
-
-/* The keyframes remain the same */
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
