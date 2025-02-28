@@ -1,3 +1,18 @@
+#projects {
+    height: 500px; /* Set a specific height */
+    overflow-y: auto; /* Enable vertical scrolling when the content overflows */
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.project p {
+    font-size: 1em;
+    color: #ffffff;
+}
+
 .project-container {
     display: flex;
     gap: 20px;
@@ -14,14 +29,14 @@
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
 
 .project-title, .project-description {
     z-index: 5;
-    color: #333;
+    color: #ffffff;
     padding: 10px;
     transition: opacity 0.3s ease; /* Smooth fade-out effect */
 }
@@ -111,8 +126,6 @@
     height: auto;
     border-radius: 8px; /* Optional rounded corners */
 }
-
-
 
 ul li a {
     text-decoration: none;
