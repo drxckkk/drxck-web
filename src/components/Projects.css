@@ -1,6 +1,6 @@
 #projects {
-  height: 700px; /* Set a specific height */
-  overflow-y: auto; /* Enable vertical scrolling when the content overflows */
+  height: 700px;
+  overflow-y: auto;
   align-items: flex-end;
   justify-content: center;
   margin-top: 100px;
@@ -51,23 +51,7 @@
 .project-content {
   padding: 20px;
   color: #000000;
-  z-index: 2;
   position: relative;
-}
-
-.project-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project:hover .project-image {
-  opacity: 1;
 }
 
 .project-image img {
@@ -83,30 +67,22 @@
 }
 
 #projects .project video {
-  position: absolute; /* Allows positioning relative to the .project container */
-  bottom: 5%; /* Pins the video to the bottom */
+  position: absolute;
+  bottom: 5%;
   left: 50%;
   right: 0;
   width: 90%;
   height: auto;
   max-width: 100%;
   transform: translateX(-50%);
-  object-fit: cover; /* Ensures the video fills the space without stretching */
+  object-fit: cover;
   border-radius: 8px;
-  display: block;
+  opacity: 0.5;
+  transition: all 0.3s ease-in;
 }
 
 #projects .project:hover video {
-  display: block;
-}
-
-@keyframes fadeIn {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
+  opacity: 1;
 }
 
 ul li a {

@@ -31,6 +31,7 @@ header.scrolled {
     left: 0;
     width: 100%;
     border-radius: 0;
+    padding: 0.8%;
 }
 
 .container {
@@ -51,7 +52,7 @@ h1 {
 }
 
 h1:hover {
-    color: #696969; /* Change color on hover */
+    color: #696969;
 }
 
 nav ul {
@@ -70,5 +71,5 @@ nav a {
 
 nav a:hover {
     color: #9e9e9e;
-    transform: scale(1.1); /* Slightly scale up the link */
+    transform: scale(1.1);
 }
